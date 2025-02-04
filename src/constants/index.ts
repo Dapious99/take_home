@@ -1,11 +1,13 @@
-export const prioriy = [
-  { value: "low", label: "Low" },
-  { value: "moderate", label: "Moderate" },
+export const priorities = [
   { value: "high", label: "High" },
+  { value: "moderate", label: "Moderate" },
+  { value: "low", label: "Low" },
 ];
 
-export const category = [
-  { value: "readings", label: "Readings" },
+export const categories = [
+  { value: "chores", label: "Chores" },
   { value: "shopping", label: "Shopping" },
   { value: "cleaning", label: "Cleaning" },
+  { value: "knowledge", label: "Knowledge" },
+  { value: "work", label: "Work" },
 ];
