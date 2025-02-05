@@ -37,7 +37,7 @@ const TodoForm = ({ setTodos }: TodoFormProps) => {
     setTodo({ title: "", category: "", priority: "", status: "incomplete" });
   };
   return (
-    <div className="px-4 md:flex md:justify-center">
+    <div className="px-4 md:px-0 md:flex md:justify-center">
       <form onSubmit={handleSubmit} className="md:w-2/4">
         <div className="space-y-4 w-full">
           <div className="flex flex-col gap-2">

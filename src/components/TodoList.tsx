@@ -60,7 +60,7 @@ const TodoList = ({
     );
 
   return (
-    <div className="px-4 md:flex md:justify-center overflow-x-scroll hide-scrollbar">
+    <div className="px-4 md:px-0 md:flex md:justify-center overflow-x-scroll hide-scrollbar">
       <table className="border md:w-2/4">
         <thead>
           <tr>
