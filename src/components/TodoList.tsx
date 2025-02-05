@@ -64,24 +64,24 @@ const TodoList = ({
       <table className="border md:w-2/4">
         <thead>
           <tr>
-            <th className="border px-3">Title</th>
-            <th className="border px-3">Category</th>
-            <th className="border px-3">Priority</th>
-            <th className="border px-3">Status</th>
-            <th className="border px-3">Actions</th>
+            <th className="border px-3 py-2">Title</th>
+            <th className="border px-3 py-2">Category</th>
+            <th className="border px-3 py-2">Priority</th>
+            <th className="border px-3 py-2">Status</th>
+            <th className="border px-3 py-2">Actions</th>
           </tr>
         </thead>
         <tbody className="">
           {filteredTodos.map((existingTodo, index) => (
             <tr className="border">
-              <td className="capitalize border px-3 text-nowrap">
+              <td className="capitalize border px-3 py-2 text-nowrap">
                 {existingTodo.title}
               </td>
-              <td className="capitalize border px-3">
+              <td className="capitalize border px-3 py-2">
                 {existingTodo.category}
               </td>
               <td
-                className={`font-medium border px-3 ${
+                className={`font-medium border px-3 py-2 ${
                   existingTodo.priority === "high"
                     ? "capitalize text-red-500"
                     : existingTodo.priority === "moderate"
@@ -92,7 +92,7 @@ const TodoList = ({
                 {existingTodo.priority}
               </td>
               <td
-                className={`capitalize border px-3 font-medium ${
+                className={`capitalize border px-3 py-2 font-medium ${
                   existingTodo.status === "incomplete"
                     ? "text-red-700"
                     : "text-green-700"
@@ -100,24 +100,24 @@ const TodoList = ({
               >
                 {existingTodo.status}
               </td>
-              <td className="border px-3 flex gap-1 items-center">
-                <Button
-                  onClick={() => handleEdit(index)}
-                  className="bg-transparent"
-                >
-                  ✏️
+              <td className="border px-3 py-2 flex gap-1 items-center">
+                <Button onClick={() => handleEdit(index)} className="px-2 py-1">
+                  {/* ✏️ */}
+                  Edit
                 </Button>
                 <Button
                   onClick={() => handleDelete(index)}
-                  className="bg-transparent"
+                  className="px-2 py-1"
                 >
-                  🗑️
+                  {/* 🗑️ */}
+                  Delete{" "}
                 </Button>
                 <Button
                   onClick={() => handleToggleStatus(index)}
-                  className="bg-transparent"
+                  className="px-2 py-1"
                 >
-                  {existingTodo.status === "incomplete" ? "✅" : "⏪"}
+                  {/* {existingTodo.status === "incomplete" ? "✅" : "⏪"} */}
+                  {existingTodo.status === "incomplete" ? "Complete" : "Undo"}
                 </Button>
               </td>
             </tr>
